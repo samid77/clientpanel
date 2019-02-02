@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FormsModule } from '@angular/forms';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { environment } from '../environments/environment';
 
@@ -42,7 +44,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [
     ClientService
