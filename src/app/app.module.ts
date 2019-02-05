@@ -9,6 +9,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { environment } from '../environments/environment';
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +50,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     FlashMessagesModule.forRoot()
   ],
   providers: [
-    ClientService
+    ClientService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
